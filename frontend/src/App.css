@@ -1,0 +1,225 @@
+/* Additional custom styles for the app */
+.App {
+  background: var(--bg-primary);
+  min-height: 100vh;
+  font-family: 'Fira Code', monospace;
+}
+
+/* Bookmark grid animations */
+.bookmark-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  animation: slideUp 0.5s ease-out;
+}
+
+@media (max-width: 768px) {
+  .bookmark-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Search form styling */
+.search-form {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Clock styling */
+.clock {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.1em;
+}
+
+/* Bookmark card hover effect */
+.bookmark-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.bookmark-card:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Auth form styling */
+.auth-form {
+  animation: slideUp 0.6s ease-out;
+}
+
+/* Settings modal */
+.settings-modal {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Notification styles */
+.notification {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid #ffffff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+  .bookmark-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+}
+
+/* User menu dropdown */
+.user-menu {
+  animation: slideUp 0.2s ease-out;
+}
+
+/* Theme transition */
+.theme-transition {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Search suggestions */
+.search-suggestions {
+  animation: slideUp 0.2s ease-out;
+}
+
+/* Bookmark categories */
+.category-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.category-tab {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.category-tab:hover,
+.category-tab.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Add bookmark form */
+.add-bookmark-form {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Error states */
+.error-message {
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Success states */
+.success-message {
+  color: #51cf66;
+  background: rgba(81, 207, 102, 0.1);
+  border: 1px solid rgba(81, 207, 102, 0.3);
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Custom checkbox styling */
+.custom-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.custom-checkbox:checked {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.custom-checkbox:checked::after {
+  content: '✓';
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Drag and drop styles */
+.bookmark-dragging {
+  opacity: 0.5;
+  transform: rotate(5deg);
+}
+
+.bookmark-drop-zone {
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Weather widget */
+.weather-widget {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* News feed */
+.news-feed {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.news-item {
+  padding: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.news-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .bookmark-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .category-tabs {
+    justify-content: center;
+  }
+  
+  .category-tab {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
