@@ -20,7 +20,7 @@ const Dashboard = () => {
   useEffect(() => {
     fetchBookmarks();
     fetchSearchEngines();
-  }, []);
+  }, [api]);
 
   const fetchBookmarks = async () => {
     try {
